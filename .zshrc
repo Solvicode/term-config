@@ -105,6 +105,11 @@ slap()
   cd ~/git/"$@";
 };
 
+tmx()
+{
+  source ~/.config/tmux/scripts/"$@".sh
+}
+
 docker_rm_all() {
   docker stop $(docker ps -aq)
   docker rm $(docker ps -aq)
@@ -130,7 +135,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 
 # Poetry config / all .local/bin files
-export PATH="/home/fredmannings/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # Go! Setup
 export GOPATH=$HOME/go
@@ -140,7 +145,7 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 # Bun setup
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-[ -s "/home/fredmannings/.bun/_bun" ] && source "/home/fredmannings/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # NVM Config
 export NVM_DIR="$HOME/.nvm"
@@ -148,7 +153,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Pulumi Setup
-export PATH=$PATH:/home/fredmannings/.pulumi/bin
+export PATH=$PATH:$HOME/.pulumi/bin
 
 # oh-my-zsh configuration
 plugins=(
