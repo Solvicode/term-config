@@ -164,7 +164,7 @@ fi
 # Set zsh as default shell
 print_status "Setting zsh as default shell..."
 if [[ $SHELL != *"zsh"* ]]; then
-    chsh -s $(which zsh)
+    chsh -s $(which zsh) $USER
 fi
 
 print_success "Installation complete!"
