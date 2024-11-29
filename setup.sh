@@ -64,25 +64,7 @@ mkdir -p ~/git/solvicode/term-config
 # install required packages
 print_status "Installing required packages..."
 sudo apt update
-sudo apt-get install -y curl git zsh zsh-autosuggestions zsh-syntax-highlighting
-sudo apt install \
-    build-essential \
-    curl \
-    libbz2-dev \
-    libffi-dev \
-    liblzma-dev \
-    libncursesw5-dev \
-    libreadline-dev \
-    libsqlite3-dev \
-    libssl-dev \
-    libxml2-dev \
-    libxmlsec1-dev \
-    llvm \
-    make \
-    tk-dev \
-    wget \
-    xz-utils \
-    zlib1g-dev
+sudo apt-get install -y curl git zsh zsh-autosuggestions zsh-syntax-highlighting build-essential curl libbz2-dev libffi-dev liblzma-dev libncursesw5-dev libreadline-dev libsqlite3-dev libssl-dev libxml2-dev libxmlsec1-dev llvm make tk-dev wget xz-utils zlib1g-dev
 
 # install Oh My Zsh
 print_status "Installing Oh My Zsh..."
