@@ -156,11 +156,16 @@ export NVM_DIR="$HOME/.nvm"
 # Pulumi Setup
 export PATH=$PATH:$HOME/.pulumi/bin
 
+# Deno setup
+if [[ ":$FPATH:" != *":/home/fredmannings/.zsh/completions:"* ]]; then export FPATH="/home/fredmannings/.zsh/completions:$FPATH"; fi
+. "/home/fredmannings/.deno/env"
+
 # oh-my-zsh configuration
 plugins=(
   git
   pyenv
   golang
+  docker
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
